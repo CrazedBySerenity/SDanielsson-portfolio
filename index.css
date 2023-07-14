@@ -1,0 +1,163 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef5eb;
+
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.landing-page {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.section {
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    justify-content: space-between;
+}
+
+.img__container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    padding: 10px;
+    border-radius: 15px;
+    height: 100%;
+}
+
+.gif-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 200px;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-image: url(images/Asteroids-SS.png);
+}
+
+.img--asteroids {
+    opacity: 1;
+}
+
+.img--asteroids:hover {
+    opacity: 1;
+    background-image: url(images/Asteroids.gif);
+}
+
+.img--large {
+    max-height: 600px;
+}
+
+.img--medium {
+    max-height: 400px;
+    max-width: 800px;
+}
+
+.section__div {
+    height: 20px;
+    width: 100%;
+    max-width: 1550px;
+
+    border-radius: 10px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+
+    padding: 5px;
+    border-radius: 15px;
+    margin-bottom: auto;
+}
+
+.section__header{
+    margin-bottom: 0;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.sub-header {
+    margin: 0;
+    opacity: 0.6;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.section__text {
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.play-btn {
+    max-width: 140px;
+    height: 56px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #eef5eb;
+    text-decoration:none; 
+    cursor:pointer;
+
+    border: 0;
+    border-radius: 20px;
+
+    background-color: #500094;
+}
+
+.play-btn:active {
+    background-color: #eef5eb;
+
+    color: #500094;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.green-bg {
+    background-color: #c5dcbc;
+}
+
+.blue-bg {
+    background-color: #9daccd;
+}
+
+.mr {
+    margin-right: 15px;
+}
+
+.ml {
+    margin-left: 15px
+}
+
+/* Swap to mobile < 1200px */
