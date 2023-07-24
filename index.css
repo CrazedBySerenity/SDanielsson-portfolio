@@ -279,3 +279,7 @@ body {
         background-color: black;
     }
   }
+
+  .isLighted {
+    visibility: hidden;
+  }

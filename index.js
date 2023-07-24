@@ -1,7 +1,7 @@
-const shadowIntensity = .15;
-const directionIntensity = 0.7;
+const shadowIntensity = .4;
+const directionIntensity = 0.1;
 
-const maxShadow = 400;
+const maxShadow = 150;
 
 let mousePos = {x: undefined, y:undefined};
 
@@ -12,15 +12,18 @@ window.addEventListener("mousemove", (event) => {
     //console.log(mousePos.x + " " + mousePos.y);
 
     for(let i = 0; i < lightedObjects.length; i++){
+        let rect = lightedObjects[i].getBoundingClientRect();
         const pos = {
-            x: lightedObjects[i].offsetLeft + lightedObjects[i].clientWidth / 2,
-            y: lightedObjects[i].offsetTop - lightedObjects[i].clientHeight / 2};
-            //Offset bugs slightly with the margin
-    
-        //let direction = {x: (pos.x - mousePos.x) / Math.abs((pos.x - mousePos.x)), y: (pos.y - mousePos.y) / Math.abs((pos.y - mousePos.y))};
+            x: rect.x + rect.width / 2,
+            y: rect.y + rect.height / 2};
+
         let direction = {x: (pos.x - mousePos.x), y: (pos.y - mousePos.y)};  
-        let intensity =  screen.width - Math.sqrt(Math.pow((pos.x - mousePos.x), 2) + Math.pow((pos.y - mousePos.y), 2));
-        intensity = (Math.pow(intensity, 2) / (screen.width * screen.height)) * shadowIntensity;
+        let intensity =  (1 - 
+            Math.sqrt(Math.pow((pos.x - mousePos.x), 2) + Math.pow((pos.y - mousePos.y), 2))
+            / Math.sqrt(Math.pow(screen.width, 2) + Math.pow((screen.height), 2)))
+            * shadowIntensity;
+
+        if(i === 1)console.log(intensity);
 
         if(direction.x > maxShadow) direction.x = maxShadow;
         if(direction.y > maxShadow) direction.y = maxShadow;
@@ -28,9 +31,11 @@ window.addEventListener("mousemove", (event) => {
         if(direction.y < -maxShadow) direction.y = -maxShadow;
     
         lightedObjects[i].style.boxShadow = `
-        ${direction.x * directionIntensity * 0.2}px ${direction.y * directionIntensity * 0.2}px ${intensity * 0.6 * 1000}px rgba(255, 255, 255, ${intensity * 0.6}), 
-        ${direction.x * directionIntensity * 0.6}px ${direction.y * directionIntensity * 0.6}px ${intensity * 0.75 * 1000}px rgba(255, 255, 255, ${intensity * 0.75}), 
-        ${direction.x * directionIntensity * 1}px ${direction.y * directionIntensity * 1}px ${intensity * 1 * 1000}px rgba(255, 255, 255, ${intensity * 1})`;
+        ${direction.x}px ${direction.y}px ${10 * intensity / shadowIntensity}px rgba(255, 255, 255, ${intensity * 0.6}), 
+        ${direction.x}px ${direction.y}px ${60 * intensity / shadowIntensity}px rgba(255, 255, 255, ${intensity * 0.75}), 
+        ${direction.x}px ${direction.y}px ${120 * intensity / shadowIntensity}px rgba(255, 255, 255, ${intensity * 1})`;
+
+        lightedObjects[i].style.visibility = 'visible';
     }
 });
 
