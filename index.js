@@ -1,7 +1,7 @@
-const shadowIntensity = .4;
+const shadowIntensity = 1;
 const directionIntensity = 0.1;
 
-const maxShadow = 150;
+const maxShadow = 1000;
 
 let mousePos = {x: undefined, y:undefined};
 

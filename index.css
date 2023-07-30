@@ -1,9 +1,19 @@
 
+:root {
+    --main-color: #500094;
+    --secondary-color: #eef5eb;
+    /* rgb(218, 237, 110) */
+    --bg-color: #121315;
+    --secondary-bg-color: rgb(218, 237, 110);
+    --text-color: #eef5eb;
+    --secondary-text-color: #121315;
+}
+
 body {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    background-color: #121315;
+    background-color: var(--bg-color);
 
     padding-right: 10px;
     padding-left: 10px;
@@ -35,11 +45,11 @@ body {
 
     text-align: center;
 
-    color: white
+    color: var(--text-color);
 }
 
 .title__card{
-    color: white;
+    color: var(--text-color);
 }
 
 .title__desc {
@@ -57,7 +67,17 @@ body {
     margin-right: 20px;
     margin-left: 20px;
 
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--bg-color);
     border-radius: 15px;
+
+    background-color: var(--main-color);
+
+    overflow: hidden;
+
+    box-shadow: inset var(--bg-color) 0px 0px 30px 30px
+    , var(--secondary-color) 0px 0px 20px 5px;
 }
 
 .img__container {
@@ -66,10 +86,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .img {
-    margin-top: 140px;
+    /* margin-top: 140px; */
 
     padding: 0px;
     border-radius: 25px;
@@ -153,7 +174,7 @@ body {
     border-radius: 15px;
     margin-bottom: auto;
 
-    color: #eef5eb;
+    color: var(--text-color);
 
     /* box-shadow:
     0 2.8px 2.2px rgba(255, 255, 255, 0.034),
@@ -199,20 +220,20 @@ body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
     font-size: 18px;
-    color: #eef5eb;
+    color: var(--text-color);
     text-decoration:none; 
     cursor:pointer;
 
     border: 0;
     border-radius: 25px;
 
-    background-color: #500094;
+    background-color: var(--main-color);
 }
 
 .play-btn:hover {
-    background-color: #eef5eb;
+    background-color: var(--text-color);
 
-    color: #500094;
+    color: var(--main-color);
 }
 
 .row-reverse {
@@ -223,16 +244,16 @@ body {
     flex-direction: row;
 }
 
-.green-bg {
+.main-color {
     background-color: #010203;
 }
 
-.blue-bg {
-    background-color: #f2f85a;
+.secondary-color {
+    background-color: var(--secondary-color);
 }
 
-.white-bg {
-    background-color: white;
+.white-color {
+    background-color: var(--text-color);
 }
 
 .mr {
@@ -251,6 +272,15 @@ body {
 .align-end {
     align-self: flex-end;
 }
+
+.isLighted {
+    visibility: hidden;
+  }
+
+  .hidden-text {
+    max-width: 120px;
+    color: var(--main-color);
+  }
 
 /* Swap to mobile < 1200px */
 
@@ -278,8 +308,4 @@ body {
         height: 10px;
         background-color: black;
     }
-  }
-
-  .isLighted {
-    visibility: hidden;
   }
