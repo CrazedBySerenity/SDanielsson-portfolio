@@ -6,8 +6,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/paranoia.css">
+    <link rel="stylesheet" href="styles/index.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -21,14 +22,41 @@
     </div>
     <div class="section__div"></div>
     <div class="section row">
-        <div class="img__container">
-            <img src="images/Paranoia-SS-2.png" class="img img--medium green-bg paranoia-img isLighted">
+        <div class="paranoia-container">
+            <div class="questions__container" onClick="buttonClick()">
+                <p class="questions__text" id="questions-text">
+                    Press the button for the next question
+                </p>
+                <div id="countdown-container">
+                    <p id="countdown-text">
+                        0
+                    </p>
+                </div>
+            </div>
+            <!-- <button id="continue-btn" onClick="buttonClick()">
+                Click
+            </button> -->
+            <div class="answer__container">
+                <p class="answer-text__name">Sophia: </p>
+                <p class="section__text" id="answer-text">...</p>
+            </div>
+            <div class="rules__container">
+                <p class="rules__text">
+
+                </p>
+            </div>
         </div>
+        <!-- <div class="img__container">
+            <img src="images/Paranoia-SS-2.png" class="img img--medium green-bg paranoia-img isLighted">
+        </div> -->
         <div class="text-container green-bg ml width--medium isLighted">
             <h3 class="section__header">Paranoia</h3>
-            <p class="sub-header">sub header</p>
+            <p class="sub-header">Fun social game. </p>
             <p class="section__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero aperiam blanditiis nobis reiciendis fuga dicta officiis est, voluptatibus facere, minima fugiat soluta ipsum laboriosam, cumque harum magni maxime quasi.
+                Press the button and a question is revealed only to one person 
+                (in this case me!), I give my answer out loud, you click to proceed and then there's a 50/50 chance 
+                that the question is either revealed or kept secret. Keep clicking to keep going! <br><br> This is a tailored demo, full version 
+                available through the button below!
             </p>
             <a class="play-btn" href="https://crazedbyserenity.github.io/Paranoia-game/" target="_blank">Play online</a>
         </div>
@@ -92,6 +120,7 @@
         </div>
     </div>
     <div class="section__div"></div>
-    <script src="index.js"></script>
+    <script src="scripts/shadows.js"></script>
+    <script src="scripts/paranoia.js"></script>
 </body>
 </html>
