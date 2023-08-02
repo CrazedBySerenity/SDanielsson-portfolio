@@ -22,7 +22,7 @@ body {
 .title-page {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
 
     gap: 10px;
 
@@ -43,9 +43,24 @@ body {
     font-weight: 700;
     font-size: 28px;
 
-    text-align: center;
+    text-align: end;
 
     color: var(--text-color);
+}
+
+.title__header__first-names {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title__header__first-names > * {
+    padding: 0px;
+    margin: 0px;
+}
+
+.title__header__alt-name {
+    color: rgb(104, 104, 104);
 }
 
 .title__card{
@@ -55,6 +70,15 @@ body {
 .title__desc {
     grid-area: 2 / 1 / 3 / 2;
     text-align: center;
+}
+
+.door {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 120px;
+
+    grid-area: 1 / 2 / 3 / 2;
+    background-color: white;
 }
 
 .section {

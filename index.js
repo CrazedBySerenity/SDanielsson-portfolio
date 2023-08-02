@@ -1,5 +1,8 @@
 const shadowIntensity = 1;
 const directionIntensity = 0.1;
+const spreadIntensity = 0.4;
+
+const shadowColor = "228, 218, 199";
 
 const maxShadow = 1000;
 
@@ -19,9 +22,12 @@ window.addEventListener("mousemove", (event) => {
 
         let direction = {x: (pos.x - mousePos.x), y: (pos.y - mousePos.y)};  
         let intensity =  (1 - 
-            Math.sqrt(Math.pow((pos.x - mousePos.x), 2) + Math.pow((pos.y - mousePos.y), 2))
+            Math.sqrt(Math.pow(direction.x, 2) + Math.pow(direction.y, 2))
             / Math.sqrt(Math.pow(screen.width, 2) + Math.pow((screen.height), 2)))
             * shadowIntensity;
+            let spread = Math.sqrt(Math.pow(direction.x, 2) + Math.pow(direction.y, 2))
+                * spreadIntensity
+            - 40;
 
         if(i === 1)console.log(intensity);
 
@@ -31,9 +37,9 @@ window.addEventListener("mousemove", (event) => {
         if(direction.y < -maxShadow) direction.y = -maxShadow;
     
         lightedObjects[i].style.boxShadow = `
-        ${direction.x}px ${direction.y}px ${10 * intensity / shadowIntensity}px rgba(255, 255, 255, ${intensity * 0.6}), 
-        ${direction.x}px ${direction.y}px ${60 * intensity / shadowIntensity}px rgba(255, 255, 255, ${intensity * 0.75}), 
-        ${direction.x}px ${direction.y}px ${120 * intensity / shadowIntensity}px rgba(255, 255, 255, ${intensity * 1})`;
+        ${direction.x}px ${direction.y}px ${10 * intensity * shadowIntensity * 0.6}px ${spread}px rgba(${shadowColor}, ${intensity * 0.6}), 
+        ${direction.x}px ${direction.y}px ${60 * intensity * shadowIntensity * 0.75}px ${spread}px rgba(${shadowColor}, ${intensity * 0.75}), 
+        ${direction.x}px ${direction.y}px ${120 * intensity * shadowIntensity * 1}px ${spread}px rgba(${shadowColor}, ${intensity * 1})`;
 
         lightedObjects[i].style.visibility = 'visible';
     }
