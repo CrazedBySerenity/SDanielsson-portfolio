@@ -77,7 +77,7 @@ function countdown() {
     else if(curTimer <= 0){
         countdownText.textContent = curTimer;
         let hideQuestion = Math.random() > 0.50;
-        questionText.textContent = hideQuestion ? "The question is kept secret" : "The previous question was: " + curQuestion;
+        questionText.textContent = hideQuestion ? "The question is kept secret" : "The question was: " + curQuestion;
         answerText.textContent = answers[curQuestion] ? answers[curQuestion] : "...";
         countdownContainer.style.visibility = "hidden";
         curTimer = timerLength;
