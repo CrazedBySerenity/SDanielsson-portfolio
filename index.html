@@ -5,23 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@600;700&family=Tektur:wght@700&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/paranoia.css">
     <link rel="stylesheet" href="styles/index.css">
     <title>Portfolio</title>
 </head>
 <body>
-    <div class="title-page">
-        <div class="title__header__container main-color">
-            <h1 class="title__header">Ville Danielsson</h1>
+
+    <div class="header">
+        <div class="column">
+            <h1 class="header__title">Sophia Danielsson</h1>
+            <h3 class="title__header">Web and Unity developer</h3>
+            <div class="title-page">
+                <div class="title__header__container main-color">
+                </div>
+                <div class="title__card title__snd-desc main-color">
+                    
+                </div>
+                <div class="title__card title__desc main-color">
+                </div>
+                <div class="title__card main-color"></div>
+            </div>
         </div>
-        <div class="title__card title__desc main-color">
-            <h3 class="section__text">Front-end developer</h3>
+        <img src="images/Hike_1.jpeg" class="header__img">
+    </div>
+    <div class="section__div"></div>
+    <div class="secondary-header row">
+        <h3 class="title__header">Projects:</h3>
+    </div>
+    <div class="section row-reverse bg-pattern--very-low">
+        <div class="img__container">
+            <img src="images/Drink-a-booh-SS.png" class="img img--large main-color">
+        </div>
+        <div class="text-container main-color mr width--medium">
+            <h3 class="section__header">Drink-A-Booh</h3>
+            <p class="sub-header">Social game built with Unity</p>
+            <p class="section__text">
+                A social 'drinking' game for IOS developed on behalf of a client. <br><br> 
+                The project had me developing prototypes every other week, implementing new solutions bi-weekly based on playtesting
+                and user feedback. After finding a version that felt right I proceeded to build the app for launch on the App Store.
+            </p>
         </div>
     </div>
     <div class="section__div"></div>
-    <div class="section row">
+    <div class="section row bg-pattern--low">
+        <div class="img__container">
+            <div class="sword-girl__bg sword-girl__cursor">
+                <div class="sword-girl__bush one"></div>
+                <div class="sword-girl__bush two"></div>
+                <div class="sword-girl__bush three"></div>
+                <div class="sword-girl__bush four"></div>
+                <div class="sword-girl__bush five"></div>
+                <div class="sword-girl__bush six"></div>
+                <div class="sword-girl__bush seven"></div>
+                <div class="sword-girl__bee one"></div>
+                <div class="sword-girl__bee two"></div>
+                <div class="sword-girl__bee three"></div>
+            </div>
+            <!-- <img src="images/Sword-girl-SS.png" class="img img--medium main-color"> -->
+        </div>
+        <div class="text-container main-color ml width--medium">
+            <h3 class="section__header">Sword girl</h3>
+            <p class="sub-header">Top-down swing-em-all built with Unity</p>
+            <p class="section__text">
+                Saving the world is in full swing as Flower (the knight) and her botanic 
+                companion Fury (the flower) set out to swoosh away all the evil bees. <br> <br>
+                Developed during an 8-hour game jam. Credits to my awesome teammate for creating the art!
+            </p>
+            <a class="play-btn" href="https://crazedbyserenity.github.io/sword-girl-build/" target="_blank">Play online</a>
+        </div>
+    </div>
+    <div class="section__div"></div>
+    <div class="section row bg-pattern--mid">
+        <div class="img__container">
+            <img src="images/Asteroids-SS.png" class="img img--medium main-color">
+        </div>
+
+        <div class="text-container main-color ml width--medium">
+            <h3 class="section__header">Space rocks</h3>
+            <p class="sub-header">2D shooter built with React</p>
+            <p class="section__text">
+                Control a spaceship and shoot down incoming asteroids in this 2D space shooter 
+                built as a group project within React. <br><br> We wanted to really push the 
+                boundaries of the React framework so we decided to create a real-time game and 
+                developed our very own fixed-fps game loop, collision system, movement and shooting to make it a reality.
+            </p>
+        </div>
+    </div>
+    <div class="section__div"></div>
+    <div class="section row-reverse bg-pattern--high">
+        <div class="img__container">
+            <img src="images/Pros-cons-SS.png" class="img img--medium main-color">
+        </div>
+        <div class="text-container main-color mr width--medium">
+            <h3 class="section__header">Pros-cons</h3>
+            <p class="sub-header">Web-tool built using Javascript</p>
+            <p class="section__text">
+                A simple tool to create a pros and cons list.
+            </p>
+            <a class="play-btn align-end" href="https://crazedbyserenity.github.io/pros-cons/" target="_blank">Use online</a>
+        </div>
+    </div>
+    <div class="section__div"></div>
+    <div class="section row bg-pattern--very-high">
         <div class="paranoia-container">
             <div class="questions__container" onClick="buttonClick()">
                 <p class="questions__text" id="questions-text">
@@ -51,81 +138,15 @@
         </div> -->
         <div class="text-container main-color ml width--medium">
             <h3 class="section__header">Paranoia</h3>
-            <p class="sub-header">Fun social game. </p>
+            <p class="sub-header">Social game built with Javascript </p>
             <p class="section__text">
                 Press the button and a question is revealed only to one person 
-                (in this case me!), I give my answer out loud, after the countdown there is a 50/50 chance 
-                that the question is either revealed or kept secret. Keep clicking to keep going! <br><br> This is a tailored demo, full version 
-                available through the button below!
+                (in this case me!), every question is answered with a name
+                 I give my answer out loud, after the countdown there is a 50/50 chance 
+                that the question is either revealed or kept secret. Keep clicking to keep going! <br><br> 
+                This is a tailored demo, full version available through the button below!
             </p>
             <a class="play-btn" href="https://crazedbyserenity.github.io/Paranoia-game/" target="_blank">Play online</a>
-        </div>
-    </div>
-    <div class="section__div"></div>
-    <div class="section row-reverse">
-        <div class="img__container">
-            <img src="images/Drink-a-booh-SS.png" class="img img--large main-color">
-        </div>
-        <div class="text-container main-color mr width--medium isLighted">
-            <h3 class="section__header">Drink-A-Booh</h3>
-            <p class="sub-header">sub header</p>
-            <p class="section__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero aperiam blanditiis nobis reiciendis fuga dicta officiis est, voluptatibus facere, minima fugiat soluta ipsum laboriosam, cumque harum magni maxime quasi.
-            </p>
-        </div>
-    </div>
-    <div class="section__div"></div>
-    <div class="section row">
-        <div class="img__container">
-            <div class="sword-girl__bg sword-girl__cursor">
-                <div class="sword-girl__bush one"></div>
-                <div class="sword-girl__bush two"></div>
-                <div class="sword-girl__bush three"></div>
-                <div class="sword-girl__bush four"></div>
-                <div class="sword-girl__bush five"></div>
-                <div class="sword-girl__bush six"></div>
-                <div class="sword-girl__bush seven"></div>
-                <div class="sword-girl__bee one"></div>
-                <div class="sword-girl__bee two"></div>
-                <div class="sword-girl__bee three"></div>
-            </div>
-            <!-- <img src="images/Sword-girl-SS.png" class="img img--medium main-color"> -->
-        </div>
-        <div class="text-container main-color ml width--medium">
-            <h3 class="section__header">Sword girl</h3>
-            <p class="sub-header">sub header</p>
-            <p class="section__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero aperiam blanditiis nobis reiciendis fuga dicta officiis est, voluptatibus facere, minima fugiat soluta ipsum laboriosam, cumque harum magni maxime quasi.
-            </p>
-            <a class="play-btn" href="https://crazedbyserenity.github.io/sword-girl-build/" target="_blank">Play online</a>
-        </div>
-    </div>
-    <div class="section__div"></div>
-    <div class="section row-reverse">
-        <div class="img__container">
-            <img src="images/Pros-cons-SS.png" class="img img--medium main-color">
-        </div>
-        <div class="text-container main-color mr width--medium">
-            <h3 class="section__header">Pros-cons</h3>
-            <p class="sub-header">sub header</p>
-            <p class="section__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero aperiam blanditiis nobis reiciendis fuga dicta officiis est, voluptatibus facere, minima fugiat soluta ipsum laboriosam, cumque harum magni maxime quasi.
-            </p>
-            <a class="play-btn align-end" href="https://crazedbyserenity.github.io/pros-cons/" target="_blank">Play online</a>
-        </div>
-    </div>
-    <div class="section__div"></div>
-    <div class="section row">
-        <div class="img__container">
-            <img src="images/Asteroids-SS.png" class="img img--medium main-color">
-        </div>
-
-        <div class="text-container main-color ml width--medium">
-            <h3 class="section__header">Space rocks</h3>
-            <p class="sub-header">sub header</p>
-            <p class="section__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis libero aperiam blanditiis nobis reiciendis fuga dicta officiis est, voluptatibus facere, minima fugiat soluta ipsum laboriosam, cumque harum magni maxime quasi.
-            </p>
         </div>
     </div>
     <div class="section__div"></div>
