@@ -12,24 +12,24 @@ let questions = [
     "Who would you trust to write and perform a song about your life?",
     "Who would you want to be your partner in a karaoke duet?",
     "Who would you pick to be handcuffed to for 24 hours",
-    "Who would you trust to design and construct a gravity-defying treehouse for you?",
-    "Who would you want to have as your wingman or wingwoman at a singles bar?",
+    "Who would you trust to design your dream home?",
+    "Who would you want to have as your wingman or wingwoman?",
     "Who would you choose to be your co-star in a movie about time-traveling hamsters?",
-    "Who would you 'forget' somewhere if they were your travel buddy for a round-the-world trip?",
+    "Who would you 'forget' somewhere if they were your travel buddy?",
     "Who would you want as your personal chef for a month?",
-    "Who would you choose to accompany you on a thrilling amusement park adventure?,"
+    "Who would you bring to an awesome amusement park?",
 ];
 
 let answers = {
     "Who would you trust to write and perform a song about your life?": "Phil collins",
     "Who would you want to be your partner in a karaoke duet?": "Taylor Swift",
     "Who would you pick to be handcuffed to for 24 hours": "Tom Cruise",
-    "Who would you trust to design and construct a gravity-defying treehouse for you?": "Gary Chang",
-    "Who would you want to have as your wingman or wingwoman at a singles bar?": "Tina Fey",
+    "Who would you trust to design your dream home?": "Gary Chang",
+    "Who would you want to have as your wingman or wingwoman?": "Tina Fey",
     "Who would you choose to be your co-star in a movie about time-traveling hamsters?": "Samuel L Jackson",
-    "Who would you 'forget' somewhere if they were your travel buddy for a round-the-world trip?": "All of my siblings",
+    "Who would you 'forget' somewhere if they were your travel buddy?": "All of my siblings",
     "Who would you want as your personal chef for a month?": "My grandma",
-    "Who would you choose to accompany you on a thrilling amusement park adventure?": "My girlfriend"
+    "Who would you bring to an awesome amusement park?": "My girlfriend"
 }
 
 function buttonClick () {
