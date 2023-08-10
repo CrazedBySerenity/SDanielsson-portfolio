@@ -27,6 +27,7 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
+    align-items: center;
 
     max-height: 600px;
 
@@ -38,6 +39,9 @@ body {
 .header__img {
     border: 2px solid var(--accent-color);
     border-radius: 15px;
+
+    width: 350px;
+    height: 600px;
 }
 
 .header__title {
@@ -46,6 +50,16 @@ body {
     color: var(--text-color);
 
     margin-bottom: 0;
+}
+
+.header__scnd-title {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+
+    text-align: center;
+
+    color: rgb(127, 127, 127);
 }
 
 .secondary-header {
@@ -115,7 +129,7 @@ body {
 .title__desc {
     text-align: center;
 }
-.title__snd-desc {
+.title__scnd-desc {
     text-align: center;
 }
 
@@ -427,6 +441,29 @@ body {
     color: var(--accent-color);
 }
 
+.resume-container {
+    max-height: 400px;
+
+    background-color: white;
+    padding: 15px;
+    margin: 40px;
+
+    border-radius: 10px;
+
+    box-shadow: -2px 3px 4px var(--bg-color);
+
+    transform: rotate(-5deg);
+    transition: all ease-in-out 0.2s;
+}
+
+.resume-container:hover {
+    box-shadow: 0x 0px 10px 5px var(--bg-color);
+    transform: rotate(0deg);
+    transform: scale(1.3);
+
+    cursor: pointer;
+}
+
 .row-reverse {
     flex-direction: row-reverse;
 }
@@ -468,6 +505,10 @@ body {
 
 .align-end {
     align-self: flex-end;
+}
+
+.justify-spaced {
+    justify-content: space-around;
 }
 
 .isLighted {
